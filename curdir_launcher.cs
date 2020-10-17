@@ -15,7 +15,7 @@ class Program
 	        {
 	            FileName = @"python.exe",
 	            UseShellExecute = false,
-	            Arguments = pythonScriptPath + " " + string.Join(" ", args),
+	            Arguments = "\"" + pythonScriptPath + "\" \"" + string.Join("\" \"", args),
 	    	};
 	    	
 		    using (var process = Process.Start(startInfo))
